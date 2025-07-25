@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services Form</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="email.js" defer></script>
+</head>
+<body>
+
+  <form id="contact-form" class="form-container">
+    <h2>Services</h2>
+    <hr/>
+
+    <!-- Event Type -->
+    <label>Event Type</label>
+    <div class="form-group event-types">
+      <input type="hidden" name="event_type" id="event_type" />
+      <button type="button" data-type="Wedding">Wedding</button>
+      <button type="button" data-type="Party">Party</button>
+      <button type="button" data-type="Photoshoot">Photoshoot</button>
+    </div>
+
+    <!-- Event Date + Time -->
+    <div class="form-group row">
+      <div class="column">
+        <label for="event_date">Event Date</label>
+        <input type="date" name="event_date" />
+        <label><input type="checkbox" name="date_undecided" /> Not decided</label>
+      </div>
+      <div class="column">
+        <label for="event_time">Event Time</label>
+        <select name="event_time">
+          <option value="Full day">Full day</option>
+          <option value="Morning">Morning</option>
+          <option value="Afternoon">Afternoon</option>
+        </select>
+        <label><input type="checkbox" name="time_undecided" /> Not decided</label>
+      </div>
+    </div>
+
+    <!-- Name -->
+    <label>Your Name</label>
+    <input type="text" name="user_name" placeholder="Your name" required />
+
+    <!-- Contact Method -->
+    <label>Contact</label>
+    <div class="radio-group">
+      <label><input type="radio" name="contact_method" value="Call" checked /> Call</label>
+      <label><input type="radio" name="contact_method" value="WhatsApp" /> WhatsApp</label>
+      <label><input type="radio" name="contact_method" value="SMS" /> SMS</label>
+      <label><input type="radio" name="contact_method" value="Email" /> Email</label>
+    </div>
+
+    <!-- Phone -->
+    <label>Phone Number</label>
+    <input type="tel" name="user_phone" placeholder="+1 Your mobile number" required />
+
+    <!-- Submit -->
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
