@@ -8,7 +8,7 @@ const TEMPLATE_ID = ""; // https://dashboard.emailjs.com/admin/templates
   });
 })();
 
-const contactForm = document.querySelector("#contact-form");
+const contactForm = document.querySelector("#service-form");
 const eventTypeButtons = document.querySelectorAll(".event-types button");
 const eventTypeInput = document.querySelector("#event_type");
 
