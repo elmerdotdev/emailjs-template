@@ -8,7 +8,7 @@ const TEMPLATE_ID = ""; // https://dashboard.emailjs.com/admin/templates
   });
 })();
 
-const contactForm = document.querySelector("#service-form");
+const serviceForm = document.querySelector("#service-form");
 const eventTypeButtons = document.querySelectorAll(".event-types button");
 const eventTypeInput = document.querySelector("#event_type");
 
@@ -22,10 +22,10 @@ eventTypeButtons.forEach((button) => {
 });
 
 // Submit Form
-contactForm.addEventListener("submit", function (event) {
+serviceForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  const formData = new FormData(contactForm);
+  const formData = new FormData(serviceForm);
 
   const message = `
     Event Type: ${formData.get("event_type")}
@@ -48,7 +48,7 @@ contactForm.addEventListener("submit", function (event) {
   emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams).then(
     () => {
       alert("Message sent successfully!");
-      contactForm.reset();
+      serviceForm.reset();
       eventTypeButtons.forEach((btn) => btn.classList.remove("selected"));
     },
     (error) => {
