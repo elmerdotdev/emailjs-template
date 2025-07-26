@@ -12,7 +12,7 @@ const contactForm = document.querySelector("#contact-form");
 const eventTypeButtons = document.querySelectorAll(".event-types button");
 const eventTypeInput = document.querySelector("#event_type");
 
-// Event Type selection
+// Event Type
 eventTypeButtons.forEach((button) => {
   button.addEventListener("click", () => {
     eventTypeButtons.forEach((btn) => btn.classList.remove("selected"));
@@ -21,7 +21,7 @@ eventTypeButtons.forEach((button) => {
   });
 });
 
-// Form submit
+// Submit Form
 contactForm.addEventListener("submit", function (event) {
   event.preventDefault();
 
