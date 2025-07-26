@@ -1,6 +1,6 @@
-const PUBLIC_KEY = "zviwdG_J7DP2PmtF3";
-const SERVICE_ID = "service_5v22h3s";
-const TEMPLATE_ID = "template_3ca7buw";
+const PUBLIC_KEY = ""; // https://dashboard.emailjs.com/admin/account
+const SERVICE_ID = ""; // https://dashboard.emailjs.com/admin - Connect gmail first!
+const TEMPLATE_ID = ""; // https://dashboard.emailjs.com/admin/templates
 
 (function () {
   emailjs.init({
